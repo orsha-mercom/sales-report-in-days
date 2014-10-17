@@ -27,8 +27,9 @@ public class Login implements Serializable {
 
     private void fillShopItem() {
         int countShop = Integer.parseInt(getBundle().getString("countShop"));
+        shopItem = new ArrayList<String>();
         for (int i = 0; i < countShop; i++) {
-            shopItem.set(i, getBundle().getString("name" + i));
+            shopItem.add(getBundle().getString("name" + i));
         }
     }
 

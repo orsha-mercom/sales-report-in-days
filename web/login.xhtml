@@ -5,18 +5,23 @@
       xmlns:h="http://java.sun.com/jsf/html"
       xmlns:f="http://java.sun.com/jsf/core">
 <h:head>
-    <!--<f:loadBundle var="ttl" basename="titles"/>-->
     <title>#{msgs.loginTitle}</title>
+    <h:outputStylesheet library="css" name="common.css"/>
 </h:head>
 <h:body>
-    <h:form>
-        <h:outputText value="#{msgs.selectMag}"/>
-        <!--<h:outputText value="#{shps.countShop}"/>-->
-        <h:selectOneMenu>
-            <f:selectItems value="#{login.shopItemsValue}"/>
-        </h:selectOneMenu>
-        <h:commandButton value="#{msgs.btnOk}"/>
-        <h:commandButton value="#{msgs.btnCancel}"/>
-    </h:form>
+    <div id="parent">
+        <div align="center" class="marginTop">
+            <h:outputText value="#{msgs.loginTitle}" styleClass="titleStage"/>
+            <h:form>
+                <h:panelGrid columns="3">
+                    <h:outputText value="#{msgs.selectMag}"/>
+                    <h:selectOneMenu>
+                        <f:selectItems value="#{login.shopItemsValue}"/>
+                    </h:selectOneMenu>
+                    <h:commandButton value="#{msgs.btnOk}"/>
+                </h:panelGrid>
+            </h:form>
+    </div>
+    </div>
 </h:body>
 </html>
