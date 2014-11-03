@@ -48,4 +48,8 @@ public class Login implements Serializable {
 //        shopItem.add(1, "two");
         return shopItem;
     }
+
+    public String test() {
+        return "repCondition";
+    }
 }

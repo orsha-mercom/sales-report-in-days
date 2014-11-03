@@ -28,9 +28,9 @@
             <version>2.2.8</version>
         </dependency>
         <dependency>
-            <groupId>org.icefaces</groupId>
-            <artifactId>icefeces-ace</artifactId>
-            <version>3.3.0</version>
+            <groupId>org.primefaces</groupId>
+            <artifactId>primefaces</artifactId>
+            <version>5.1</version>
         </dependency>
 
         <dependency>
