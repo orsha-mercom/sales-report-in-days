@@ -8,6 +8,11 @@
 .ui-button{
     width: 300px;
 }
+.selectedCondition{
+    font-size: 24px;
+    font-style: oblique;
+    color: indigo;
+}
 /*.ui-selectonemenu{*/
     /*height: 35px;*/
 /*}*/

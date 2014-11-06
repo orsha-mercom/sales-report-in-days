@@ -15,6 +15,7 @@ import javax.servlet.ServletContext;
 public class Login implements Serializable {
     private int defaultShopCount;
     private ArrayList<String> shopItem;
+    private String selectItem = "";
     private ResourceBundle bundle;
 
     private ResourceBundle getBundle() {
@@ -37,19 +38,19 @@ public class Login implements Serializable {
         fillShopItem();
     }
 
-    public String getDefaultShop() {
-        //return shopItem.get(defaultShopCount);
-        return "defValue";
+    public String getSelectItem() {
+        return selectItem;
+    }
+
+    public void setSelectItem(String selectItem) {
+        this.selectItem = selectItem;
+    }
+
+    public void setShopItemsValue(String value) {
+        selectItem = value;
     }
 
     public ArrayList<String> getShopItemsValue() {
-//        shopItem = new ArrayList<String>(2);
-//        shopItem.add(0, "one");
-//        shopItem.add(1, "two");
         return shopItem;
-    }
-
-    public String test() {
-        return "repCondition";
     }
 }

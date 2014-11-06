@@ -16,5 +16,9 @@
             <base-name>by.mercom.selectShops</base-name>
             <var>shps</var>
         </resource-bundle>
+        <resource-bundle>
+            <base-name>by.mercom.defaultValue</base-name>
+            <var>default</var>
+        </resource-bundle>
     </application>
 </faces-config>
