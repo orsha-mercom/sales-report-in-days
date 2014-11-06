@@ -6,12 +6,12 @@
       xmlns:f="http://java.sun.com/jsf/core"
       xmlns:p="http://primefaces.org/ui">
 <h:head>
-    <title>#{msgs.loginTitle1}</title>
+    <title>#{msgs.step1}</title>
     <h:outputStylesheet library="css" name="common.css"/>
     </h:head>
 <h:body>
         <div align="center" class="marginTop">
-            <h:outputText value="#{msgs.loginTitle1}" styleClass="titleStage"/>
+            <h:outputText value="#{msgs.step1}" styleClass="titleStage"/>
             <h:form>
                 <h:panelGrid columns="2">
                     <p:outputLabel value="#{msgs.selectMag}"/>
@@ -20,10 +20,16 @@
                     </p:selectOneMenu>
                     <f:facet name="footer">
                         <h:panelGroup style="display: block; text-align: center">
-                            <p:commandButton value="#{msgs.btnOk}" action="repCondition"/>
+                            <p:commandButton value="#{msgs.btnOk}" action="repCondition" style="width: 250px"/>
                         </h:panelGroup>
                     </f:facet>
                 </h:panelGrid>
+
+                <!--<h:commandButton value="Submit"  />-->
+        <!--<h:inputText id="checks" size="20" value="#{test.test}" required="true" label="44444444444">-->
+            <!--<f:validateLength minimum="13"/>-->
+        <!--</h:inputText> <h:messages for="checks"/>-->
+
             </h:form>
         </div>
 </h:body>

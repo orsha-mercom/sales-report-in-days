@@ -4,13 +4,22 @@ import java.util.Date;
 
 @ManagedBean
 public class DateBean implements Serializable{
-    private Date date;
+    private Date dateFirst = new Date();
+    private Date dateEnd = new Date();
 
-    public Date getDate() {
-        return date;
+    public Date getDateFirst() {
+        return dateFirst;
     }
 
-    public void setDate(Date date) {
-        this.date = date;
+    public void setDateFirst(Date dateFirst) {
+        this.dateFirst = dateFirst;
+    }
+
+    public Date getDateEnd() {
+        return dateEnd;
+    }
+
+    public void setDateEnd(Date dateEnd) {
+        this.dateEnd = dateEnd;
     }
 }

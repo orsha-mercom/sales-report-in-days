@@ -7,47 +7,36 @@
       xmlns:f="http://java.sun.com/jsf/core"
       xmlns:p="http://primefaces.org/ui">
 <h:head>
-    <title>Calendar</title>
+    <title>#{msgs.step2}</title>
     <h:outputStylesheet library="css" name="common.css"/>
-    <h:outputStylesheet library="css" name="calendar.css"/>
-    <script type="text/javascript">
-        PrimeFaces.locales ['ru'] = {
-            closeText: 'Закрыть',
-            prevText: 'Назад',
-            nextText: 'Вперёд',
-            monthNames: ['Январь', 'Февраль' , 'Март' , 'Апрель' , 'Май' , 'Июнь' , 'Июль' , 'Август' , 'Сентябрь','Октябрь','Ноябрь','Декабрь' ],
-            monthNamesShort: ['Янв', 'Фев', 'Мар', 'Апр', 'Май', 'Июн', 'Июл', 'Авг', 'Сен', 'Окт', 'Ноя', 'Дек' ],
-            dayNames: ['Воскресенье', 'Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Субота'],
-            dayNamesShort: ['Воск','Пон' , 'Вт' , 'Ср' , 'Четв' , 'Пят' , 'Суб'],
-            dayNamesMin: ['В', 'П', 'Вт', 'С ', 'Ч', 'П ', 'Сб'],
-            weekHeader: 'Неделя',
-            firstDay: 1,
-            isRTL: false,
-            showMonthAfterYear: false,
-            yearSuffix:'',
-            timeOnlyTitle: 'Только время',
-            timeText: 'Время',
-            hourText: 'Час',
-            minuteText: 'Минута',
-            secondText: 'Секунда',
-            currentText: 'Сегодня',
-            ampm: false,
-            month: 'Месяц',
-            week: 'неделя',
-            day: 'День',
-            allDayText: 'Весь день'
-        };
-    </script>
+    <h:outputScript library="javascript" name="calendar_local_rus.js"/>
+    <!--<script type="text/javascript">-->
+
+        <!--};-->
+    <!--</script>-->
 </h:head>
 <h:body>
     <div align="center" class="marginTop">
-        <h:outputText value="#{msgs.loginTitle2}" styleClass="titleStage"/>
+        <h:outputText value="#{msgs.step2}" styleClass="titleStage"/>
         <h:form>
-            <p:outputLabel value="#{msgs.firstDate}"/> <p:calendar value="#{dateBean.date}" mode="popup" size="12" showOn="button" pattern="dd.MM.yyyy" locale="ru"/>
-            <p:outputLabel value="#{msgs.endDate}"/> <p:calendar value="#{dateBean.date}" mode="popup" size="12" showOn="button" pattern="dd.MM.yyyy" locale="ru"/>
-            <h:panelGroup style="display: block; text-align: center; margin-top: 5px">
-                <p:commandButton value="#{msgs.btnOk}" action="repCondition"/>
+            <h:panelGrid columns="1">
+            <h:panelGroup>
+                <p:outputLabel value="#{msgs.firstDate}"/> <p:calendar value="#{dateBean.dateFirst}" mode="popup" size="12" showOn="both" pattern="dd.MM.yyyy" locale="ru"/>
+                <p:outputLabel value="#{msgs.endDate}"/> <p:calendar value="#{dateBean.dateEnd}" mode="popup" size="12" showOn="both" pattern="dd.MM.yyyy" locale="ru"/>
             </h:panelGroup>
+            <h:panelGroup>
+                <p:outputLabel value="#{msgs.selectPartner}" style="vertical-align: middle;"/>
+                    <p:selectOneMenu style="vertical-align: middle">
+                        <f:selectItems value="#{partners.partnerArrayList}"/>
+                    </p:selectOneMenu>
+            </h:panelGroup>
+            <f:facet name="footer">
+                    <h:panelGroup style="display: block; text-align: center">
+                        <p:commandButton value="#{msgs.btnBack}" action="login" style="width: 250px"/>
+                        <p:commandButton value="#{msgs.btnOk}" action="repCondition" style="width: 250px"/>
+                    </h:panelGroup>
+            </f:facet>
+            </h:panelGrid>
         </h:form>
     </div>
 </h:body>

@@ -5,9 +5,9 @@
 .marginTop{
     margin-top: 300px;
 }
-/*.ui-button{*/
-    /*height: 30px;*/
-/*}*/
+.ui-button{
+    width: 300px;
+}
 /*.ui-selectonemenu{*/
     /*height: 35px;*/
 /*}*/
